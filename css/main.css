@@ -1,0 +1,784 @@
+/* Impotar Fuentes */
+  /* Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+  /* Rammeto One */
+@import url('https://fonts.googleapis.com/css2?family=Rammetto+One&display=swap');
+
+/* PROPIEDADES GLOBALES */
+html{
+  box-sizing: border-box;
+  font-size: 62.5%;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+  background-color: #FFF2E5;
+}
+
+*, *::before, *::after{
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+/* CABECERA */
+#cabecera{
+  width: 100%;
+  background-color: #EEA66D;
+  font-size: 1.6rem;
+}
+.contenido-nav{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+  min-height: 80px;
+}
+.list-nav{
+  display: none;
+  position: absolute;
+  top: 80px;
+  left: 0;
+  background-color: #EEA66D;
+  width: 100%;
+  text-align: center;
+  z-index: 2;
+  transition: all 0.5s ease;
+}
+.list-nav.active{
+  display: block;
+}
+.list-nav li{
+  list-style: none;
+  padding: 15px 0;
+  border-bottom: 1px solid #ccc;
+}
+.list-nav li:first-child{
+  border-top: 1px solid #ccc;
+}
+.list-nav li:last-child{
+  border-bottom: none;
+}
+.list-nav li:active{
+  background-color: #ccc;
+}
+.list-nav a{
+  text-decoration: none;
+  color: #000;
+}
+.icon-menu{
+  font-size: 3.5rem;
+}
+
+/* BANNER PRINCIPAL */
+#banner{
+  background: url("../img/banner.jpg") no-repeat center top fixed;
+  background-size: cover;
+}
+.contenido-banner{
+  min-height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 15px;
+}
+.descripcion-banner{
+  text-align: center;
+}
+.descripcion-banner img{
+  width: 100px;
+  height: auto;
+}
+.descripcion-banner h1{
+  font-family: "Rammetto One";
+  font-size: 2.7rem;
+  line-height: 40px;
+  color: #FFF2E5;
+}
+.descripcion-banner p{
+  font-size: 1.6rem;
+  color: #fff;
+  opacity: 0.7;
+}
+.descripcion-banner p:last-child{
+  padding-top: 20px;
+  font-size: 1.8rem;
+  animation: parpadeo 2s infinite;
+}
+.boton-banner{
+  position: relative;
+  top: -30px;
+}
+.boton-banner .btn-pedido{
+  font-size: 1.6rem;
+  padding: 12px 20px;
+  color: #fff;
+  font-weight: bold;
+  background: -webkit-linear-gradient(left, #FF512F 0%, #F09819 100%);
+  background: -o-linear-gradient(left, #FF512F 0%, #F09819 100%);
+  background: linear-gradient(to right, #FF512F 0%, #F09819 100%);
+  box-shadow: 0px 0px 11px rgba(255, 255, 255, 0.61);
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* BLOQUE NOSOTROS */
+#nosotros{
+  background: url("../img/wavi-nosotros.svg") no-repeat center top;
+  background-size: cover;
+  min-height: 600px;
+  overflow: hidden;
+}
+.contenedor-nosotros{
+  width: 100%;
+  padding: 15px;
+}
+.contenedor-nosotros h2{
+  text-align: center;
+  color: #fff;
+  font-size: 1.8rem;
+  padding-bottom: 10px;
+}
+.contenedor-nosotros p{
+  text-align: justify;
+  line-height: 18px;
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 300;
+  padding-bottom: 10px;
+}
+.img-nosotros{
+  position: relative;
+  width: 100%;
+  min-height: 200px;
+}
+.img-nosotros img{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 5px solid #F09819;
+}
+.img-nosotros .img0{
+  width: 220px;
+  transform: translate(-75%, -50%) rotate(-10deg);
+}
+.img-nosotros .img1{
+  width: 220px;
+  transform: translate(-25%, -50%) rotate(10deg);
+}
+.img-nosotros .img2{
+  width: 220px;
+}
+
+/* INFORMACION NUTRICIONAL */
+#nutricional{
+  width: 100%;
+}
+.contenido-nutricional{
+  padding: 15px 15px;
+}
+.descripcion-nutricional h2{
+  text-align: center;
+  font-size: 1.8rem;
+  padding-bottom: 10px;
+  opacity: 0.8;
+}
+.descripcion-nutricional p{
+  font-size: 1.6rem;
+  line-height: 18px;
+  font-weight: 300;
+  text-align: justify;
+  padding-bottom: 10px;
+  opacity: 0.8;
+}
+.descripcion-nutricional h3{
+  text-align: center;
+  font-size: 1.6rem;
+  opacity: 0.8;
+}
+.descripcion-nutricional span{
+  display: block;
+  text-align: center;
+  padding-bottom: 10px;
+  font-size: 1.2rem;
+  font-weight: 300;
+  opacity: 0.8;
+}
+.descripcion-nutricional p:last-child{
+  text-align: center;
+  padding-bottom: 3px;
+  font-weight: 700;
+  opacity: 0.8;
+}
+.table-nutricional table{
+  width: 100%;
+  height: 100%;
+  border-collapse: collapse;
+  color: #212121;
+}
+.table-nutricional thead{
+  background-color: #FF512F;
+}
+.table-nutricional tbody{
+  background-color: #FF937F;
+}
+.table-nutricional th, td{
+  border: 1px solid #ccc;
+  padding: 3px 5px;
+}
+.table-nutricional .microgramos{
+  text-align: right;
+}
+.table-nutricional .vitaminas{
+  display: flex;
+  align-items: center;
+}
+.table-nutricional .vitamina{
+  display: inline-block;
+  width: 100%;
+  height: 20px;
+  margin-right: 10px;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+  transition: 0.4s ease-in-out;
+}
+.table-nutricional .vitamina.vitamina-a{
+  width: 28.4%;
+  background-color: #34c2e3;
+}
+.table-nutricional .vitamina.vitamina-d{
+  width: 36%;
+  background-color: #FFAA00;
+}
+.table-nutricional .vitamina.vitamina-e{
+  width: 15.8%;
+  background-color: #70E311;
+}
+.table-nutricional .vitamina.vitamina-r{
+  width: 26.4%;
+  background-color: #B70E97;
+}
+.table-nutricional .vitamina.vitamina-n{
+  width: 20.6%;
+  background-color: #7C09FF;
+}
+.table-nutricional .vitamina.vitamina-f{
+  width: 25.6%;
+  background-color: #079494;
+}
+.table-nutricional .vitamina.vitamina-b{
+  width: 84%;
+  background-color: #F76F0B;
+}
+.table-nutricional .vitamina.vitamina-bi{
+  width: 40%;
+  background-color: #4F16A8;
+}
+.table-nutricional .vitamina.vitamina-pa{
+  width: 30%;
+  background-color: #1D85CE;
+}
+.table-nutricional .vitamina.vitamina-fo{
+  width: 30.8%;
+  background-color: #13BAC9;
+}
+.table-nutricional .vitamina.vitamina-h{
+  width: 15.7%;
+  background-color: #12D481;
+}
+.table-nutricional .vitamina.vitamina-z{
+  width: 20%;
+  background-color: #FF8715;
+}
+.table-nutricional .vitamina.vitamina-s{
+  width: 18.2%;
+  background-color: #F51444;
+}
+.table-nutricional .vitamina.vitamina-co{
+  width: 63%;
+  background-color: #A418D1;
+}
+.stripes .vitamina{
+  background-size: 30px 30px;
+  background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  animation: animate-stripes 3s linear infinite;
+}
+.img-nutricional{
+  display: none;
+}
+
+/* BLOQUE PEDIDOS */
+#pedidos{
+  width: 100%;
+}
+.contenido-pedidos{
+  width: 100%;
+  padding: 15px 15px;
+}
+.descripcion-pedidos h2{
+  text-align: center;
+  font-size: 1.8rem;
+  padding-bottom: 10px;
+  opacity: 0.8;
+}
+.descripcion-pedidos p{
+  text-align: center;
+  font-size: 1.6rem;
+  padding-bottom: 10px;
+  opacity: 0.8;
+}
+.descripcion-pedidos p:last-child{
+  color: #F51444;
+  font-weight: 700;
+  font-size: 1.2rem;
+  opacity: 0.8;
+}
+.table-pedidos{
+  width: 100%;
+}
+.table-pedidos table{
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1.2rem;
+}
+.table-pedidos thead{
+  background-color: #FF512F;
+}
+.table-pedidos tbody{
+  background-color: #FF937F;
+}
+.table-pedidos th{
+  color: #fff;
+  padding: 5px;
+  font-size: 1rem;
+}
+.table-pedidos th, .table-pedidos td{
+  border: 1px solid #808080;
+}
+.table-pedidos .descripcion{
+  display: none;
+}
+.table-pedidos .img{
+  display: none;
+}
+.table-pedidos .pedido{
+  text-align: center;
+}
+.table-pedidos button{
+  padding: 10px 5px;
+  font-weight: 700;
+  color: #fff;
+  box-shadow: 0px 0px 11px rgba(255, 255, 255, 0.61);
+  border: none;
+  border-radius: 5px;
+}
+.table-pedidos .maple1{
+  background: linear-gradient(90deg, #396AFC 0%, #2948FF 100%);
+}
+.table-pedidos .media-caja{
+  background: linear-gradient(90deg, #FFB347 0%, #FFCC33 100%);
+}
+.table-pedidos .caja1{
+  background: linear-gradient(90deg, #DA22FF 0%, #9733EE 100%);
+}
+.table-pedidos .size{
+  text-align: center;
+  font-weight: bold;
+}
+.table-pedidos .precio-bs{
+  text-align: right;
+  font-weight: 700;
+}
+.table-pedidos span{
+  font-size: 1rem;
+}
+.table-pedidos .pequeno{
+  background-color: #C4F5DD;
+}
+.table-pedidos .chico{
+  background-color: #F5F2BA;
+}
+.table-pedidos .mediano{
+  background-color: #C2CFFF;
+}
+.table-pedidos .grande{
+  background-color: #FCDCC2;
+}
+.table-pedidos .x-grande{
+  background-color: #E6A5DD;
+}
+
+/* PIE DE PAGINA */
+#pie-pagina{
+  width: 100%;
+  background-color: #282d32;
+}
+.contenedor-pie{
+  padding: 15px 15px;
+  min-height: 80px;
+  display: flex;
+  flex-direction: column;
+  color: #f0f9ff;
+}
+.contenedor-pie .contacto{
+  padding-bottom: 15px;
+  text-align: center;
+}
+.contenedor-pie .contacto h3{
+  font-size: 1.4rem;
+  padding-bottom: 5px;
+}
+.contacto p{
+  font-size: 1.2rem;
+  opacity: 0.6;
+  padding-bottom: 5px;
+}
+.contacto a{
+  color: #f0f9ff;
+  text-decoration: none;
+}
+.contenedor-pie .redes-sociales{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 15px;
+}
+.redes-sociales .redes{
+  display: block;
+  text-align: center;
+  line-height: 43px;
+  margin: 0 15px;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+.redes a{
+  font-size: 2.5rem;
+  color: #fff;
+}
+.redes.facebook{
+  background-color: #385898;
+}
+.redes.whatsapp{
+  background-color: #28b351;
+}
+.redes.celular{
+  background-color: #F51444;
+}
+.laponedorita span{
+  display: block;
+  font-size: 1.2rem;
+  opacity: 0.6;
+  text-align: center;
+}
+
+/* SEPARADOR */
+.separador{
+  padding: 0 15px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.separador .line{
+  display: block;
+  width: 120px;
+  height: 6px;
+  border-radius: 10px;
+}
+.separador .line.left{
+  background: linear-gradient(90deg, #C02425 0%, #F0CB35 100%);
+}
+.separador .line.right{
+  background: linear-gradient(90deg, #F0CB35 0%, #C02425 100%);
+}
+.separador svg.huevo{
+  width: 30px;
+}
+
+/* BOTON ARRIBA */
+.btn-up{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #F09819;
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* APLICACION DE MEDIAS QUERIES */
+@media screen and (min-width: 576px){
+  /* BANNER PRINCIPAL */
+  .descripcion-banner img{
+    width: auto;
+  }
+  /* BLOQUE NOSOTROS */
+  .img-nosotros{
+    min-height: 250px;
+  }
+  .img-nosotros .img0{
+    width: 300px;
+  }
+  .img-nosotros .img1{
+    width: 300px;
+  }
+  .img-nosotros .img2{
+    width: 280px;
+  }
+  /* INFORMACION NUTRICIONAL */
+  .contenido-nutricional{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .descripcion-nutricional{
+    flex: 2 1 100%;
+  }
+  .table-nutricional{
+    width: 50%;
+    height: auto;
+    flex: 1 1 50%;
+  }
+  .img-nutricional {
+    display: block;
+    width: 50%;
+    flex: 1 1 50%;
+  }
+  .img-nutricional img{
+    width: 100%;
+    height: 100%;
+    padding-left: 10px;
+  }
+  /* BLOQUE PEDIDOS */
+  .table-pedidos .descripcion{
+    display: table-cell;
+  }
+  /* SEPARADOR */
+  .separador .line{
+    width: 200px;
+  }
+  .separador svg.huevo{
+    width: 35px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  /* CABECERA */
+  .contenido-nav{
+    width: 90%;
+    margin: auto;
+    padding: 0;
+  }
+  .list-nav{
+    display: flex;
+    position: static;
+    justify-content: flex-end;
+  }
+  .list-nav ul{
+    display: flex;
+  }
+  .list-nav li{
+    padding: 15px 10px;
+    border: none;
+    transition: all 0.3s ease;
+  }
+  .list-nav li:first-child{
+    border-top: none;
+  }
+  .list-nav li:hover,
+  .list-nav a:hover{
+    color: #fff;
+    transform: scale(1.1);
+  }
+  .list-nav a{
+    font-weight: 700;
+    opacity: 0.7;
+  }
+  .icon-menu{
+    display: none;
+  }
+  /* BANNER PRINCIPAL */
+  #nosotros{
+    min-height: 500px;
+  }
+  .contenido-banner{
+    width: 90%;
+    margin: auto;
+    padding: 0;
+  }
+  /* BLOQUE NOSOTROS */
+  .contenedor-nosotros{
+    width: 90%;
+    margin: auto;
+    padding: 20px 0;
+  }
+  /* INFORMACION NUTRICIONAL */
+  .contenido-nutricional{
+    width: 90%;
+    margin: auto;
+    padding: 20px 0;
+  }
+  /* BLOQUE PEDIDOS */
+  .contenido-pedidos{
+    width: 90%;
+    margin: auto;
+    padding: 20px 0;
+  }
+  .table-pedidos .img{
+    display: table-cell;
+  }
+  /* PIE DE PAGINA */
+  .contenedor-pie{
+    width: 90%;
+    margin: auto;
+    padding: 20px 0;
+    flex-direction: row;
+    align-items: center;
+  }
+  .contenedor-pie .contacto{
+    flex: 1;
+    text-align: left;
+  }
+  .contenedor-pie .redes-sociales{
+    flex: 1;
+  }
+  .contenedor-pie .laponedorita{
+    flex: 1;
+  }
+  .laponedorita span{
+    text-align: right;
+  }
+  /* SEPARADOR */
+  .separador{
+    width: 90%;
+    padding: 0;
+  }
+  .separador .line{
+    width: 250px;
+  }
+}
+@media screen and (min-width: 992px) {
+  /* CABECERA */
+  .contenido-nav{
+    width: 75%;
+  }
+  /* BANNER PRINCIPAL */
+  .contenido-banner{
+    width: 75%;
+  }
+  .descripcion-banner h1{
+    font-size: 4.0rem;
+  }
+  /* BLOQUE NOSOTROS */
+  .contenedor-nosotros{
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .contenedor-nosotros h2{
+    font-size: 2rem;
+    flex: 1 1 100%;
+    padding-bottom: 20px;
+  }
+  .descripcion-nosotros{
+    flex: 1 1 40%;
+  }
+  .contenedor-nosotros p{
+    text-align: left;
+    line-height: 20px;
+  }
+  .img-nosotros{
+    flex: 1 1 40%;
+  }
+  /* INFORMACION NUTRICIONAL */
+  .contenido-nutricional{
+    padding: 20px 0;
+    width: 75%;
+  }
+  .descripcion-nutricional h2{
+    font-size: 2.0rem;
+  }
+  .table-nutricional{
+    padding: 20px;
+    background-color: #EEA66D;
+    border-radius: 15px;
+  }
+  .table-nutricional table{
+    font-size: 1.6rem;
+  }
+  .table-nutricional th, td{
+    border: 1px solid #ccc;
+  }
+  .img-nutricional img{
+    padding-left: 0;
+    margin-left: 10px;
+    border-radius: 15px;
+  }
+  /* BLOQUE PEDIDOS */
+  .contenido-pedidos{
+    width: 75%;
+    padding: 20px 0;
+  }
+  .descripcion-pedidos h2{
+    font-size: 2.0rem;
+  }
+  .table-pedidos table{
+    font-size: 1.6rem;
+  }
+  .table-pedidos th{;
+    font-size: 1.6rem;
+    padding: 15px 0;
+  }
+  .table-pedidos button{
+    padding: 10px 10px;
+    cursor: pointer;
+  }
+  /* PIE DE PAGINA */
+  .contenedor-pie{
+    width: 75%;
+    padding: 20px 0;
+  }
+  .contenedor-pie .redes-sociales{
+    justify-content: flex-end;
+  }
+  /* SEPARADOR */
+  .separador{
+    width: 75%;
+    padding: 20px 0;
+  }
+  .separador .line{
+    width: 350px;
+    height: 8px;
+  }
+  .separador svg.huevo{
+    width: 45px;
+    height: auto;
+  }
+}
+
+
+
+
+
+
+/* Animaciones */
+@keyframes parpadeo {
+  0% {opacity: 1.0;}
+  50% {opacity: 0.3;}
+  100%{opacity: 1.0;}
+}
+
+@keyframes animate-stripes{
+  0%{background-position: 0 0;}
+  100%{background-position: 60px 0;}
+}
